@@ -1,0 +1,126 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+  labels:
+    app: agg
+  name: agg
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: agg
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:        
+        app: agg        
+    spec:
+      containers: 
+      - image: ezdehar/book-info-agg-v4:0.0.2-SNAPSHOT
+        imagePullPolicy: IfNotPresent
+        name: agg-1
+        env:
+#61 =  [GB2, Review, Recom2, Rev1, Recom, BookInfo, Inven, Adv, Agg, GB, Inven2]
+          - name: GB_LQ_SERVICE_HOST
+            value: http://gb2
+          - name: GB_LQ_SERVICE_PORT
+            value: "8000"
+          - name: INV1_SERVICE_HOST
+            value: http://inven2
+          - name: INV1_SERVICE_PORT
+            value: "8100"
+          - name: recommeder_SERVICE_HOST
+            value: http://recom2
+          - name: recommeder_SERVICE_PORT
+            value: "8800" 
+          - name: review_SERVICE_HOST
+            value: http://rev
+          - name: review_SERVICE_PORT
+            value: "8600"
+          - name: Adv_SERVICE_HOST
+            value: http://adv 
+          - name: Adv_SERVICE_PORT
+            value: "8700"    
+          - name: revfActive
+            value: "1"
+          - name: GBLfActive
+            value: "true" 
+          - name: advActive.optional
+            value: "true"   
+          - name: recomfActive
+            value: "true"
+        resources:
+            requests:
+              cpu: 200m
+              memory: 768Mi
+            limits:
+              cpu: 900m
+              memory: 1536Mi
+        #readinessProbe:
+          #httpGet:
+            #port: 8080
+            #path: /actuator/health/readiness
+          #initialDelaySeconds: 10   # Wait 2.5 minutes before starting readiness checks
+          #periodSeconds: 30          # Check every 30 seconds
+          #timeoutSeconds: 20         # Timeout after 10 seconds if no response
+          #successThreshold: 1
+          #failureThreshold: 5   
+        #livenessProbe:
+          #httpGet:
+            #port: 8080
+            #path: /actuator/health/liveness  
+          #initialDelaySeconds: 10   # Wait 3 minutes before starting liveness checks
+          #periodSeconds: 30          # Check every minute
+          #timeoutSeconds: 20         # Timeout after 10 seconds if no response
+          #failureThreshold: 5        # Allow up to 5 failed checks bef      
+      restartPolicy: Always
+          
+                     
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    job: agg  
+    app: agg
+  name: agg
+  annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080" 
+        prometheus.io/path: "/actuator/prometheus"
+  namespace: default
+spec:
+  ports:
+  - port: 8080
+    name: metrics
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: agg
+  sessionAffinity: None
+  type: LoadBalancer
+
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: my-cxx-monitor4
+  labels:
+    release: prometheus-operator
+    app: prometheus-operator
+spec:
+  jobLabel: job
+  selector:
+    matchLabels:
+      app: agg
+  endpoints:
+  - port: metrics
+    path: /actuator/prometheus
+    interval: 30s
