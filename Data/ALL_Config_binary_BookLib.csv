@@ -1,0 +1,73 @@
+Config_ID,Active_Services,Agg,GB1,GB2,Inven1,Inven2,Rev1,Rev2,Recom1,Recom2,Adv
+1,"Agg, GB1, Inven1, Rev1, Recom1, Adv",1,1,0,1,0,1,0,1,0,1
+2,"Agg, GB1, Inven1, Rev1, Recom1",1,1,0,1,0,1,0,1,0,0
+3,"Agg, GB1, Inven1, Rev2, Recom1, Adv",1,1,0,1,0,0,1,1,0,1
+4,"Agg, GB1, Inven1, Rev2, Recom1",1,1,0,1,0,0,1,1,0,0
+5,"Agg, GB1, Inven1, Recom1, Adv",1,1,0,1,0,0,0,1,0,1
+6,"Agg, GB1, Inven1, Recom1",1,1,0,1,0,0,0,1,0,0
+7,"Agg, GB1, Inven1, Rev1, Recom2, Adv",1,1,0,1,0,1,0,0,1,1
+8,"Agg, GB1, Inven1, Rev1, Recom2",1,1,0,1,0,1,0,0,1,0
+9,"Agg, GB1, Inven1, Rev2, Recom2, Adv",1,1,0,1,0,0,1,0,1,1
+10,"Agg, GB1, Inven1, Rev2, Recom2",1,1,0,1,0,0,1,0,1,0
+11,"Agg, GB1, Inven1, Recom2, Adv",1,1,0,1,0,0,0,0,1,1
+12,"Agg, GB1, Inven1, Recom2",1,1,0,1,0,0,0,0,1,0
+13,"Agg, GB1, Inven1, Rev1, Adv",1,1,0,1,0,1,0,0,0,1
+14,"Agg, GB1, Inven1, Rev1",1,1,0,1,0,1,0,0,0,0
+15,"Agg, GB1, Inven1, Rev2, Adv",1,1,0,1,0,0,1,0,0,1
+16,"Agg, GB1, Inven1, Rev2",1,1,0,1,0,0,1,0,0,0
+17,"Agg, GB1, Inven1, Adv",1,1,0,1,0,0,0,0,0,1
+18,"Agg, GB1, Inven1",1,1,0,1,0,0,0,0,0,0
+19,"Agg, GB1, Inven2, Rev1, Recom1, Adv",1,1,0,0,1,1,0,1,0,1
+20,"Agg, GB1, Inven2, Rev1, Recom1",1,1,0,0,1,1,0,1,0,0
+21,"Agg, GB1, Inven2, Rev2, Recom1, Adv",1,1,0,0,1,0,1,1,0,1
+22,"Agg, GB1, Inven2, Rev2, Recom1",1,1,0,0,1,0,1,1,0,0
+23,"Agg, GB1, Inven2, Recom1, Adv",1,1,0,0,1,0,0,1,0,1
+24,"Agg, GB1, Inven2, Recom1",1,1,0,0,1,0,0,1,0,0
+25,"Agg, GB1, Inven2, Rev1, Recom2, Adv",1,1,0,0,1,1,0,0,1,1
+26,"Agg, GB1, Inven2, Rev1, Recom2",1,1,0,0,1,1,0,0,1,0
+27,"Agg, GB1, Inven2, Rev2, Recom2, Adv",1,1,0,0,1,0,1,0,1,1
+28,"Agg, GB1, Inven2, Rev2, Recom2",1,1,0,0,1,0,1,0,1,0
+29,"Agg, GB1, Inven2, Recom2, Adv",1,1,0,0,1,0,0,0,1,1
+30,"Agg, GB1, Inven2, Recom2",1,1,0,0,1,0,0,0,1,0
+31,"Agg, GB1, Inven2, Rev1, Adv",1,1,0,0,1,1,0,0,0,1
+32,"Agg, GB1, Inven2, Rev1",1,1,0,0,1,1,0,0,0,0
+33,"Agg, GB1, Inven2, Rev2, Adv",1,1,0,0,1,0,1,0,0,1
+34,"Agg, GB1, Inven2, Rev2",1,1,0,0,1,0,1,0,0,0
+35,"Agg, GB1, Inven2, Adv",1,1,0,0,1,0,0,0,0,1
+36,"Agg, GB1, Inven2",1,1,0,0,1,0,0,0,0,0
+37,"Agg, GB2, Inven1, Rev1, Recom1, Adv",1,0,1,1,0,1,0,1,0,1
+38,"Agg, GB2, Inven1, Rev1, Recom1",1,0,1,1,0,1,0,1,0,0
+39,"Agg, GB2, Inven1, Rev2, Recom1, Adv",1,0,1,1,0,0,1,1,0,1
+40,"Agg, GB2, Inven1, Rev2, Recom1",1,0,1,1,0,0,1,1,0,0
+41,"Agg, GB2, Inven1, Recom1, Adv",1,0,1,1,0,0,0,1,0,1
+42,"Agg, GB2, Inven1, Recom1",1,0,1,1,0,0,0,1,0,0
+43,"Agg, GB2, Inven1, Rev1, Recom2, Adv",1,0,1,1,0,1,0,0,1,1
+44,"Agg, GB2, Inven1, Rev1, Recom2",1,0,1,1,0,1,0,0,1,0
+45,"Agg, GB2, Inven1, Rev2, Recom2, Adv",1,0,1,1,0,0,1,0,1,1
+46,"Agg, GB2, Inven1, Rev2, Recom2",1,0,1,1,0,0,1,0,1,0
+47,"Agg, GB2, Inven1, Recom2, Adv",1,0,1,1,0,0,0,0,1,1
+48,"Agg, GB2, Inven1, Recom2",1,0,1,1,0,0,0,0,1,0
+49,"Agg, GB2, Inven1, Rev1, Adv",1,0,1,1,0,1,0,0,0,1
+50,"Agg, GB2, Inven1, Rev1",1,0,1,1,0,1,0,0,0,0
+51,"Agg, GB2, Inven1, Rev2, Adv",1,0,1,1,0,0,1,0,0,1
+52,"Agg, GB2, Inven1, Rev2",1,0,1,1,0,0,1,0,0,0
+53,"Agg, GB2, Inven1, Adv",1,0,1,1,0,0,0,0,0,1
+54,"Agg, GB2, Inven1",1,0,1,1,0,0,0,0,0,0
+55,"Agg, GB2, Inven2, Rev1, Recom1, Adv",1,0,1,0,1,1,0,1,0,1
+56,"Agg, GB2, Inven2, Rev1, Recom1",1,0,1,0,1,1,0,1,0,0
+57,"Agg, GB2, Inven2, Rev2, Recom1, Adv",1,0,1,0,1,0,1,1,0,1
+58,"Agg, GB2, Inven2, Rev2, Recom1",1,0,1,0,1,0,1,1,0,0
+59,"Agg, GB2, Inven2, Recom1, Adv",1,0,1,0,1,0,0,1,0,1
+60,"Agg, GB2, Inven2, Recom1",1,0,1,0,1,0,0,1,0,0
+61,"Agg, GB2, Inven2, Rev1, Recom2, Adv",1,0,1,0,1,1,0,0,1,1
+62,"Agg, GB2, Inven2, Rev1, Recom2",1,0,1,0,1,1,0,0,1,0
+63,"Agg, GB2, Inven2, Rev2, Recom2, Adv",1,0,1,0,1,0,1,0,1,1
+64,"Agg, GB2, Inven2, Rev2, Recom2",1,0,1,0,1,0,1,0,1,0
+65,"Agg, GB2, Inven2, Recom2, Adv",1,0,1,0,1,0,0,0,1,1
+66,"Agg, GB2, Inven2, Recom2",1,0,1,0,1,0,0,0,1,0
+67,"Agg, GB2, Inven2, Rev1, Adv",1,0,1,0,1,1,0,0,0,1
+68,"Agg, GB2, Inven2, Rev1",1,0,1,0,1,1,0,0,0,0
+69,"Agg, GB2, Inven2, Rev2, Adv",1,0,1,0,1,0,1,0,0,1
+70,"Agg, GB2, Inven2, Rev2",1,0,1,0,1,0,1,0,0,0
+71,"Agg, GB2, Inven2, Adv",1,0,1,0,1,0,0,0,0,1
+72,"Agg, GB2, Inven2",1,0,1,0,1,0,0,0,0,0
